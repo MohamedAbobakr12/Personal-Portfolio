@@ -9,7 +9,7 @@ const Hero = () => {
             <div className="h-full">
                 <div className="flex h-full md:items-center max-md:block mx-4">
                     <h1 className="font-semibold max-md:mt-16 w-full text-5xl max-md:text-4xl max-md:text-center max-md:font-semibold linear">
-                        Hi, I'm <TypewriterComponent options={{loop: true}} onInit={(typewriter) => {
+                        Hi, I&apos;m <TypewriterComponent options={{loop: true}} onInit={(typewriter) => {
                                     typewriter.typeString("Mohamed Abobakr")
                                     .pauseFor(100)
                                     .deleteAll()
