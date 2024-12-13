@@ -8,8 +8,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        blue: {
+          100: "#023047",
+          200: "#219EBC",
+          300: "#8ECAE6",
+        },
+      },
+      boxShadow: {
+        '3xl': '0 35px 60px -15px rgba(250, 250, 250, 0.5)',
+        '4xl': '0 25px 50px -12px rgb(0 0 0 / 0.8)'
+      },
+      fontFamily: {
+          poppins: ['Poppins', 'sans-serif'],
       },
     },
   },
