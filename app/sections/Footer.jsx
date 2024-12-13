@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { socials } from "../constants"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
+
 const Footer = () => {
     const [year, setYear] = useState(null);
     useEffect(() => {

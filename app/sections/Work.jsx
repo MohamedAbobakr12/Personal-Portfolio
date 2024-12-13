@@ -1,8 +1,9 @@
+"use client";
 import { repoCount, commitCount } from "../constants/Octokit";
 import { length } from "../constants";
 
-const Work = () => {
 
+const Work = () => {
     return (
         <section className="max-w-screen-xl mx-auto h-full my-20" id="works">
             <div className="relative w-full h-full mx:auto">
