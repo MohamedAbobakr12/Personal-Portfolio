@@ -8,7 +8,6 @@ import { useState } from "react"
 
 const Header = () => {
     const [isClick, setIsClick] = useState(false)
-    const navToggle = document.getElementById("navToggle")
 
     const toggleButton = () => {
         setIsClick(!isClick)

@@ -1,6 +1,3 @@
-"use client";
-
-
 const About = () => {
     return (
         <section className="max-w-screen-xl max-h-max mx-auto my-20" id="about">

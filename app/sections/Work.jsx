@@ -1,4 +1,3 @@
-"use client";
 import { repoCount, commitCount } from "../constants/Octokit";
 import { length } from "../constants";
 

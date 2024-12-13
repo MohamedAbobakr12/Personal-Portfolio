@@ -1,6 +1,3 @@
-"use client";
-
-
 const Contact = () => {
     return (
         <section className="max-w-screen-xl relative h-max mt-6 mx-auto" id="contact">
