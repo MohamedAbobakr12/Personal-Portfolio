@@ -15,6 +15,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.7.1",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@octokit/rest": "^21.0.2",
+    "framer-motion": "^12.23.12",
     "next": "15.0.3",
     "octokit": "^4.0.2",
     "react": "19.0.0-rc-66855b96-20241106",

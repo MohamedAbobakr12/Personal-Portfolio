@@ -18,9 +18,14 @@ module.exports = {
         '3xl': '0 35px 60px -15px rgba(250, 250, 250, 0.5)',
         '4xl': '0 25px 50px -12px rgb(0 0 0 / 0.8)'
       },
-      fontFamily: {
-          poppins: ['Poppins', 'sans-serif'],
-      },
+    },
+    screens: {
+      xs: '375px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px'
     },
   },
   plugins: [],

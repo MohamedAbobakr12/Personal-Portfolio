@@ -15,7 +15,7 @@ html {
 
 @layer components {
   .li {
-    @apply font-semibold text-white text-xl max-lg:text-sm max-md:text-2xl max-md:max-w-max max-md:ml-6 hover:text-blue-100 max-md:my-12
+    @apply font-semibold text-white text-xl max-md:text-2xl max-md:max-w-max hover:text-blue-100 transition-all duration-300
   }
 
   .linear {
@@ -26,10 +26,18 @@ html {
   }
 
   .list-works {
-    @apply bg-blue-200 p-10 rounded-3xl shadow-2xl text-blue-100
+    @apply border-2 border-blue-200 py-12 max-xl:py-20 max-lg:py-16 max-md:py-14 max-sm:py-10 px-6 max-md:px-4 rounded-xl shadow-2xl
   }
 
   .span {
-    @apply block text-[#ffb703] text-center mt-4 text-4xl
+    @apply block text-[#ffb703] text-center mt-4 text-3xl max-lg:text-2xl max-md:text-lg
+  }
+
+  .text-yellow {
+    @apply text-[#ffb703]
+  }
+
+  .services {
+    @apply border-2 border-blue-200 py-12 max-xl:py-20 max-lg:py-16 max-md:py-14 max-sm:py-10 px-6 max-md:px-2 rounded-xl shadow-2xl  
   }
 }

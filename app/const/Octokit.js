@@ -12,10 +12,10 @@ const getRepos = await octokit.request('GET /users/{username}/repos', {
 })
 const reposArray = getRepos.data;
 export const repoCount = reposArray.length;
-
-
 export let commitCount = 0
-const commitCounts = await Promise.all(
+
+
+await Promise.all(
     reposArray.map(async (repo) => {
         if (repo.size === 0) {
             return { repoName: repo.name, commitCount: 0 };
@@ -30,4 +30,3 @@ const commitCounts = await Promise.all(
         return { repoName: repo.name, commitCount: repoCommitCount };
     })
 );
-
