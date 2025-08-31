@@ -1,10 +1,37 @@
 import Transition from "@/app/components/Transition";
 import Counter from "@/app/components/Counter";
-import { repoCount, commitCount } from "@/app/const/Octokit";
+import { Octokit } from "octokit";
 import { length } from "@/app/const/index";
 
 
-const About = () => {
+const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+
+async function getGitHubStats() {
+    const reposRes = await octokit.request('GET /users/{username}/repos', {
+        username: "MohamedAbobakr12",
+        headers: { 'X-GitHub-Api-Version': '2022-11-28' },
+    });
+
+    const reposArray = reposRes.data;
+    let commitCount = 0;
+
+    await Promise.all(
+        reposArray.map(async (repo) => {
+            if (repo.size === 0) return;
+            const commitRes = await octokit.request("GET /repos/{owner}/{repo}/commits", {
+                owner: "MohamedAbobakr12",
+                repo: repo.name,
+            });
+            commitCount += commitRes.data.length;
+        })
+    );
+
+    return { repoCount: reposArray.length, commitCount };
+}
+
+const About = async () => {
+    const { repoCount, commitCount } = await getGitHubStats();
+    
     return (
         <Transition>
             <section className="max-w-screen-xl max-h-full mx-auto mt-20 mb-14">
@@ -31,7 +58,7 @@ const About = () => {
                         </li>
                     </ul>
                     <h1 className="text-6xl max-lg:text-5xl max-md:text-4xl text-center text-[#ffb703] font-semibold mt-12 ml-1 max-lg:ml-2">Information</h1>
-                    <div className="grid grid-cols-4 max-xl:grid-cols-2 max-xs:grid-cols-1 gap-x-6 max-md:gap-x-4 max-ms:gap-x-2 gap-y-8 max-md:gap-y-6 max-y-4 text-center font-semibold mt-12 mb-14 max-md:mx-2">
+                    <div className="grid grid-cols-4 max-xl:grid-cols-2 max-xs:grid-cols-1 gap-x-6 max-md:gap-x-4 max-ms:gap-x-2 gap-y-8 max-md:gap-y-6 text-center font-semibold mt-12 mb-14 max-md:mx-2">
                         <div className="list-works">
                             <h1 className="text-4xl max-lg:text-3xl max-md:text-2xl max-sm:text-xl text-blue-200">Years of Experience</h1>
                             <p className="span">+2 Years</p>
