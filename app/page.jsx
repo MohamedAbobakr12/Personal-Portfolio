@@ -35,7 +35,7 @@ const Hero =  () => {
                                 ))}
                             </ul>
                             <button className="w-max cursor-pointer py-2 px-4 border-[3px] rounded-xl li text-lg max-lg:text-sm max-lg:py-2.5 hover:bg-[#ffb703] hover:text-black mt-8">
-                                <Link href={"/assets/CV.pdf"} download={"CV"} className="flex gap-x-2 justify-center items-center">
+                                <Link href={"/assets/CV.pdf"} download={"CV"} target="_blank" className="flex gap-x-2 justify-center items-center">
                                     <FontAwesomeIcon size="md" icon={faDownload} className="relative bottom-[.8px]" />
                                     CV
                                 </Link>
