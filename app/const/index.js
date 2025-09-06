@@ -92,7 +92,7 @@ export const socials = [
     },
     {
         name: faLinkedin,
-        href: "https://www.linkedin.com/in/mohamed-abobakr1-9b83551b2/"
+        href: "https://www.linkedin.com/in/mohamed-abobakr-9b83551b2/"
     },
     {
         name: faWhatsapp,
